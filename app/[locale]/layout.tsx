@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { Fraunces, DM_Sans } from 'next/font/google';
+import { Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google';
 import { NextIntlClientProvider } from 'next-intl';
 import { getMessages } from 'next-intl/server';
 import { ThemeProvider } from '@/components/ThemeProvider';
@@ -7,16 +7,18 @@ import '@/app/globals.css';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 
-const fraunces = Fraunces({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
   variable: '--font-heading',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
   display: 'swap',
-  axes: ['SOFT', 'WONK', 'opsz'],
 });
 
-const dmSans = DM_Sans({
+const plusJakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   variable: '--font-sans',
+  weight: ['400', '500', '600', '700'],
   display: 'swap',
 });
 
@@ -74,7 +76,7 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${fraunces.variable} ${dmSans.variable} antialiased`}>
+      <body className={`${cormorant.variable} ${plusJakarta.variable} antialiased`}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>
             {children}
