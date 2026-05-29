@@ -30,23 +30,23 @@ export default function Footer() {
       aria-label="Pie de página"
     >
       <div className="max-w-4xl mx-auto px-6">
-        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
+        <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-8">
           {/* Brand */}
           <div>
-            <p className="font-heading text-lg font-bold text-foreground">
-              <span className="text-primary">{'<'}</span>Dev<span className="text-primary">{'/>'}</span>
+            <p className="font-heading text-xl font-light tracking-wide text-foreground">
+              <span className="font-heading italic text-primary font-normal">D</span>ev
             </p>
-            <p className="text-xs text-muted-foreground mt-1">{t('tagline')}</p>
+            <p className="text-[11px] tracking-wide text-muted-foreground/80 font-light mt-1.5">{t('tagline')}</p>
           </div>
 
           {/* Nav links */}
           <nav aria-label="Navegación del pie de página">
-            <ul className="flex flex-wrap gap-x-5 gap-y-2">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2">
               {footerLinks.map((link) => (
                 <li key={link.href}>
                   <a
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                    className="text-xs uppercase tracking-wider text-muted-foreground hover:text-primary transition-all duration-300 font-semibold"
                   >
                     {link.label}
                   </a>
@@ -56,13 +56,13 @@ export default function Footer() {
           </nav>
 
           {/* Language switcher */}
-          <div className="flex items-center gap-1" aria-label="Cambiar idioma">
+          <div className="flex items-center gap-1.5 p-1 rounded-full bg-secondary/80 border border-border/40" aria-label="Cambiar idioma">
             <button
               onClick={() => switchLocale('es')}
-              className={`text-xs font-semibold px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full transition-all duration-300 cursor-pointer ${
                 currentLocale === 'es'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground/80 hover:text-foreground'
               }`}
               aria-label="Cambiar a español"
               aria-pressed={currentLocale === 'es'}
@@ -71,10 +71,10 @@ export default function Footer() {
             </button>
             <button
               onClick={() => switchLocale('en')}
-              className={`text-xs font-semibold px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full transition-all duration-300 cursor-pointer ${
                 currentLocale === 'en'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground/80 hover:text-foreground'
               }`}
               aria-label="Switch to English"
               aria-pressed={currentLocale === 'en'}
