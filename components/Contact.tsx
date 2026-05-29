@@ -56,28 +56,33 @@ export default function Contact() {
   ];
 
   const inputBase =
-    'w-full px-4 py-3 rounded-[var(--radius-md)] border border-border bg-input text-foreground placeholder:text-muted-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring transition-shadow';
+    'w-full px-5 py-4 rounded-[var(--radius-md)] border border-border/80 bg-input text-foreground placeholder:text-muted-foreground/60 text-sm focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all duration-300 shadow-sm font-sans font-light';
 
   return (
     <section
       id="contact"
       aria-labelledby="contact-heading"
-      className="py-24 bg-muted/40"
+      className="py-28 bg-muted/60 relative"
     >
       <div className="max-w-4xl mx-auto px-6">
-        <h2
-          id="contact-heading"
-          className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-3"
-        >
-          {t('title')}
-        </h2>
-        <p className="text-muted-foreground mb-10">{t('subtitle')}</p>
+        <div className="mb-12">
+          <span className="text-xs tracking-widest uppercase font-semibold text-primary mb-3 block">
+            Get in Touch
+          </span>
+          <h2
+            id="contact-heading"
+            className="font-heading text-4xl md:text-5xl font-light text-foreground tracking-tight mb-3"
+          >
+            {t('title')} <span className="font-heading italic text-accent font-normal">& Proyectos</span>
+          </h2>
+          <p className="text-muted-foreground/90 font-light font-sans leading-relaxed">{t('subtitle')}</p>
+        </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-12">
           {/* Form */}
           <form
             onSubmit={handleSubmit}
-            className="md:col-span-3 flex flex-col gap-4"
+            className="md:col-span-3 flex flex-col gap-5"
             aria-label="Formulario de contacto"
             noValidate
           >
@@ -127,7 +132,7 @@ export default function Contact() {
             <button
               type="submit"
               disabled={status === 'sending' || status === 'success'}
-              className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm hover:opacity-90 active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-150 w-fit"
+              className="inline-flex items-center justify-center gap-2.5 px-8 py-4 rounded-full bg-primary text-primary-foreground font-semibold text-xs uppercase tracking-wider hover:bg-accent hover:text-accent-foreground active:scale-95 disabled:opacity-60 disabled:cursor-not-allowed transition-all duration-300 w-fit cursor-pointer shadow-md"
               aria-label={t('submit')}
             >
               <Send size={14} aria-hidden="true" />
@@ -139,7 +144,7 @@ export default function Contact() {
             </button>
 
             {status === 'error' && (
-              <p role="alert" className="text-destructive text-sm">
+              <p role="alert" className="text-destructive text-sm font-light mt-1">
                 {t('error')}
               </p>
             )}
@@ -147,7 +152,7 @@ export default function Contact() {
 
           {/* Social links */}
           <aside
-            className="md:col-span-2 flex flex-col gap-4 justify-start pt-2"
+            className="md:col-span-2 flex flex-col gap-4 justify-start"
             aria-label="Canales de contacto"
           >
             {socialLinks.map(({ icon: Icon, label, href }) => (
@@ -156,13 +161,13 @@ export default function Contact() {
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-3 px-4 py-3 rounded-[var(--radius-md)] border border-border bg-card hover:border-primary/40 hover:bg-accent transition-colors group"
+                className="flex items-center gap-4 px-5 py-4 rounded-[var(--radius-md)] border border-border bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-sm transition-all duration-300 group cursor-pointer"
                 aria-label={label}
               >
-                <span className="w-8 h-8 rounded-[var(--radius-sm)] bg-muted flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                  <Icon size={16} className="text-primary" aria-hidden="true" />
+                <span className="w-10 h-10 rounded-[var(--radius-sm)] bg-muted flex items-center justify-center group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300 text-primary">
+                  <Icon size={18} aria-hidden="true" />
                 </span>
-                <span className="text-sm font-medium text-foreground">{label}</span>
+                <span className="text-sm font-medium text-foreground/90 group-hover:text-primary transition-colors font-sans">{label}</span>
               </a>
             ))}
           </aside>
