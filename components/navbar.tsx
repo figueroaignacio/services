@@ -96,6 +96,7 @@ export default function Navbar() {
             >
               {t('langEn')}
             </button>
+          </div>
         </div>
       </div>
     </header>
