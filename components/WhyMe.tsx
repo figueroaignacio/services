@@ -13,39 +13,75 @@ export default function WhyMe() {
     { titleKey: 'card4Title', descKey: 'card4Desc' },
   ] as const;
 
+  // Split title manually for luxury styling
+  const titleText = t('title');
+  const hasY = titleText.includes(' y ');
+  const hasNot = titleText.includes(', not');
+  
+  let formattedTitle = (
+    <h2
+      id="why-me-heading"
+      className="font-heading text-4xl md:text-5xl font-light text-foreground mb-16 tracking-tight"
+    >
+      {titleText}
+    </h2>
+  );
+
+  if (hasY) {
+    const parts = titleText.split(' y ');
+    formattedTitle = (
+      <h2
+        id="why-me-heading"
+        className="font-heading text-4xl md:text-5xl font-light text-foreground mb-16 tracking-tight"
+      >
+        {parts[0]} <span className="font-heading italic text-accent font-normal">y {parts[1]}</span>
+      </h2>
+    );
+  } else if (hasNot) {
+    const parts = titleText.split(', not');
+    formattedTitle = (
+      <h2
+        id="why-me-heading"
+        className="font-heading text-4xl md:text-5xl font-light text-foreground mb-16 tracking-tight"
+      >
+        {parts[0]}<span className="font-heading italic text-accent font-normal">, not {parts[1]}</span>
+      </h2>
+    );
+  }
+
   return (
     <section
       id="why-me"
       aria-labelledby="why-me-heading"
-      className="py-24"
+      className="py-28 relative overflow-hidden"
     >
-      <div className="max-w-4xl mx-auto px-6">
-        <h2
-          id="why-me-heading"
-          className="font-heading text-3xl md:text-4xl font-bold text-foreground mb-12"
-        >
-          {t('title')}
-        </h2>
+      {/* Decorative vertical line */}
+      <div className="absolute left-1/2 top-0 bottom-0 w-[1px] bg-border/40 pointer-events-none hidden md:block" />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <div className="max-w-4xl mx-auto px-6 relative z-10">
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-2">
+          {formattedTitle}
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {cards.map((card, i) => {
             const Icon = icons[i];
             return (
               <article
                 key={card.titleKey}
-                className="group p-6 rounded-[var(--radius-lg)] border border-border bg-muted transition-colors hover:bg-card"
+                className="group p-8 rounded-[var(--radius-lg)] border border-border bg-card/40 backdrop-blur-sm transition-all duration-300 hover:border-primary/50 hover:bg-card hover:shadow-lg dark:hover:shadow-black/20"
               >
-                <div className="w-10 h-10 rounded-[var(--radius-sm)] bg-secondary flex items-center justify-center mb-4 transition-colors group-hover:bg-primary/10">
+                <div className="w-12 h-12 rounded-[var(--radius-sm)] bg-secondary flex items-center justify-center mb-6 transition-all duration-300 group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-foreground text-primary">
                   <Icon
-                    size={20}
-                    className="text-primary"
+                    size={22}
+                    className="transition-colors"
                     aria-hidden="true"
                   />
                 </div>
-                <h3 className="font-heading text-lg font-bold text-foreground mb-2">
+                <h3 className="font-heading text-xl font-medium text-foreground mb-3 tracking-tight">
                   {t(card.titleKey)}
                 </h3>
-                <p className="text-sm text-muted-foreground leading-relaxed">
+                <p className="text-sm text-muted-foreground/90 leading-relaxed font-sans font-light">
                   {t(card.descKey)}
                 </p>
               </article>
