@@ -50,22 +50,21 @@ export default function Navbar() {
         {/* Logo */}
         <Link
           href={`/${currentLocale}`}
-          className="font-heading text-xl font-bold text-foreground hover:text-primary transition-colors"
+          className="font-heading text-2xl font-light tracking-wide text-foreground hover:text-accent transition-colors flex items-center gap-1"
           aria-label="Inicio"
         >
-          <span className="text-primary">{'<'}</span>
-          Dev
-          <span className="text-primary">{'/>'}</span>
+          <span className="font-heading italic text-primary font-normal select-none">D</span>
+          <span>ev</span>
         </Link>
 
         {/* Nav Links */}
         <nav aria-label="Navegación principal">
-          <ul className="hidden md:flex items-center gap-6">
+          <ul className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
               <li key={link.href}>
                 <a
                   href={link.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors font-medium"
+                  className="text-xs uppercase tracking-wider text-muted-foreground/95 hover:text-primary transition-all duration-300 font-semibold"
                 >
                   {link.label}
                 </a>
@@ -75,15 +74,15 @@ export default function Navbar() {
         </nav>
 
         {/* Right controls */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-4">
           {/* Language switcher */}
-          <div className="flex items-center gap-1" aria-label="Cambiar idioma">
+          <div className="flex items-center gap-1.5 p-1 rounded-full bg-secondary/80 border border-border/40" aria-label="Cambiar idioma">
             <button
               onClick={() => switchLocale('es')}
-              className={`text-xs font-semibold px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full transition-all duration-300 cursor-pointer ${
                 currentLocale === 'es'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground/80 hover:text-foreground'
               }`}
               aria-label="Cambiar a español"
               aria-pressed={currentLocale === 'es'}
@@ -92,10 +91,10 @@ export default function Navbar() {
             </button>
             <button
               onClick={() => switchLocale('en')}
-              className={`text-xs font-semibold px-2 py-1 rounded-md transition-colors cursor-pointer ${
+              className={`text-[10px] uppercase tracking-widest font-bold px-2.5 py-1 rounded-full transition-all duration-300 cursor-pointer ${
                 currentLocale === 'en'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'text-muted-foreground hover:text-foreground'
+                  ? 'bg-primary text-primary-foreground shadow-sm'
+                  : 'text-muted-foreground/80 hover:text-foreground'
               }`}
               aria-label="Switch to English"
               aria-pressed={currentLocale === 'en'}
@@ -108,13 +107,13 @@ export default function Navbar() {
           {mounted && (
             <button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-              className="p-2 rounded-md text-muted-foreground hover:text-foreground hover:bg-accent transition-colors cursor-pointer"
+              className="p-2 rounded-full text-muted-foreground hover:text-foreground hover:bg-secondary border border-transparent hover:border-border/30 transition-all duration-300 cursor-pointer"
               aria-label={theme === 'dark' ? 'Activar modo claro' : 'Activar modo oscuro'}
             >
               {theme === 'dark' ? (
-                <Sun size={16} aria-hidden="true" />
+                <Sun size={15} aria-hidden="true" />
               ) : (
-                <Moon size={16} aria-hidden="true" />
+                <Moon size={15} aria-hidden="true" />
               )}
             </button>
           )}
