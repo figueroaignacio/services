@@ -1,0 +1,92 @@
+{
+  "nav": {
+    "services": "Servicios",
+    "whyMe": "Por qué yo",
+    "pricing": "Precios",
+    "contact": "Contacto",
+    "langEs": "ES",
+    "langEn": "EN"
+  },
+  "hero": {
+    "headline": "Presencia digital que convierte.",
+    "headlineAccent": "convierte.",
+    "subheadline": "No soy una agencia ni vendo plantillas. Soy un desarrollador freelance que escribe código real, construye productos sólidos y se hace cargo del resultado.",
+    "ctaPrimary": "Ver servicios",
+    "ctaSecondary": "Hablemos",
+    "techBadges": "Next.js · TypeScript · React · Node.js · Tailwind · i18n · AI"
+  },
+  "whyMe": {
+    "title": "¿Por qué yo y no una agencia?",
+    "card1Title": "Código real, no plantillas",
+    "card1Desc": "No uso constructores visuales. Cada proyecto es código limpio, performante y escalable desde cero.",
+    "card2Title": "Conocimiento técnico completo",
+    "card2Desc": "Frontend, backend, bases de datos, APIs, IA. No necesito subcontratar: todo queda bajo un mismo criterio técnico.",
+    "card3Title": "Trato directo",
+    "card3Desc": "Hablás conmigo en todo momento. Sin account managers, sin teléfono roto, sin presupuestos que llegan tarde.",
+    "card4Title": "Precio justo, sin overhead",
+    "card4Desc": "Sin oficina, sin equipo ocioso. El precio que pagás es por trabajo real, no por estructura de agencia."
+  },
+  "services": {
+    "title": "Servicios",
+    "s1Title": "Landing Pages & Portfolio",
+    "s1Desc": "Páginas de presentación, portfolios y captura de leads. Diseño a medida, cero plantillas.",
+    "s2Title": "Webs Institucionales",
+    "s2Desc": "Sitio corporativo completo: páginas internas, equipo, formularios, SEO técnico on-page.",
+    "s3Title": "Marketing Webs",
+    "s3Desc": "Webs optimizadas para conversión: estructura de copy, CTAs, integración con analytics y ads.",
+    "s4Title": "Internacionalización (i18n)",
+    "s4Desc": "Multilenguaje real con next-intl. URLs por locale, SEO hreflang, contenido adaptado por mercado.",
+    "s5Title": "Integración de IA & Bots",
+    "s5Desc": "Chatbots inteligentes, asistentes embebidos, integración con OpenAI / Anthropic. Automatizaciones reales.",
+    "s6Title": "Desarrollo Backend & APIs",
+    "s6Desc": "APIs REST o tRPC, bases de datos, autenticación, integraciones de terceros. Node.js, Prisma, PostgreSQL."
+  },
+  "pricing": {
+    "title": "Precios",
+    "toggleArs": "ARS",
+    "toggleUsd": "USD",
+    "footnote": "Precios en ARS orientativos al cambio del día. Los precios en USD son fijos.",
+    "starterName": "Starter",
+    "starterPriceArs": "desde $350.000",
+    "starterPriceUsd": "from $299",
+    "starterFor": "Para freelancers, profesionales y emprendedores",
+    "starterFeatures": ["Landing page o portfolio", "Hasta 5 secciones", "Diseño responsive", "Formulario de contacto", "Deploy en Vercel"],
+    "proName": "Pro",
+    "proPriceArs": "desde $700.000",
+    "proPriceUsd": "from $599",
+    "proFor": "Para PYMEs, estudios y marcas",
+    "proFeatures": ["Todo Starter incluido", "Web institucional completa", "SEO técnico on-page", "Hasta 8 páginas internas", "CMS básico o panel admin", "1 integración externa"],
+    "customName": "Custom",
+    "customPriceArs": "desde $1.200.000",
+    "customPriceUsd": "from $999",
+    "customFor": "Para startups y empresas con necesidades específicas",
+    "customFeatures": ["Todo lo anterior incluido", "Internacionalización (i18n)", "Integración de IA / bots", "Backend y API a medida", "Soporte extendido post-lanzamiento"],
+    "cta": "Consultar",
+    "highlighted": "Más elegido"
+  },
+  "contact": {
+    "title": "Hablemos",
+    "subtitle": "Contame tu proyecto. Te respondo en menos de 24 horas.",
+    "namePlaceholder": "Tu nombre",
+    "emailPlaceholder": "Tu email",
+    "messagePlaceholder": "Contame sobre tu proyecto...",
+    "submit": "Enviar mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado! Te respondo pronto.",
+    "error": "Algo salió mal. Intentalo de nuevo.",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "linkedin": "LinkedIn"
+  },
+  "footer": {
+    "tagline": "Desarrollo web freelance · Argentina",
+    "copyright": "Todos los derechos reservados.",
+    "services": "Servicios",
+    "pricing": "Precios",
+    "contact": "Contacto"
+  },
+  "meta": {
+    "title": "Desarrollo Web Freelance — Argentina",
+    "description": "Presencia digital que convierte. Desarrollo web freelance con Next.js, TypeScript y React. Landing pages, webs institucionales, i18n, IA y APIs. Argentina."
+  }
+}
