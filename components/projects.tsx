@@ -61,7 +61,7 @@ export default function Projects({ projects }: ProjectsProps) {
             return (
               <article
                 key={project.slug}
-                className="project-card group relative rounded-[var(--radius-lg)] border overflow-hidden transition-all duration-500 flex flex-col"
+                className="project-card group relative rounded-lg border overflow-hidden transition-all duration-500 flex flex-col"
                 style={{
                   background: 'var(--card)',
                   borderColor: 'var(--border)',
@@ -111,7 +111,7 @@ export default function Projects({ projects }: ProjectsProps) {
                           e.currentTarget.style.display = 'none'
                         }}
                       />
-                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-gradient-to-t from-[#160f0b]/80 via-transparent to-transparent pointer-events-none">
+                      <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4 bg-linear-to-t from-[#160f0b]/80 via-transparent to-transparent pointer-events-none">
                         <span className="font-heading font-light text-sm tracking-widest text-primary/40 uppercase group-hover:text-primary/75 transition-colors duration-500">
                           {project.name}
                         </span>
@@ -145,6 +145,46 @@ export default function Projects({ projects }: ProjectsProps) {
               </article>
             )
           })}
+
+          <article
+            className="project-card group relative rounded-[var(--radius-lg)] border border-dashed overflow-hidden transition-all duration-500 flex flex-col justify-center min-h-[350px]"
+            style={{
+              background: 'rgba(212, 178, 144, 0.02)',
+              borderColor: 'rgba(212, 178, 144, 0.15)',
+            }}>
+            <div
+              className="absolute inset-0 opacity-[0.08] pointer-events-none"
+              aria-hidden="true"
+              style={{
+                background: `radial-gradient(circle at 1px 1px, rgba(212,178,144,0.4) 1px, transparent 0)`,
+                backgroundSize: '24px 24px',
+              }}
+            />
+            
+            <div className="p-8 flex flex-col items-center text-center justify-center h-full">
+              <div className="w-12 h-12 rounded-full border border-dashed border-primary/30 flex items-center justify-center text-primary/60 group-hover:border-primary group-hover:text-primary transition-all duration-500 mb-6 bg-primary/5">
+                <span className="text-xl font-light font-sans">+</span>
+              </div>
+              
+              <h3 className="font-heading text-xl font-light text-foreground tracking-tight mb-2">
+                {t('moreComing')}
+              </h3>
+              
+              <p
+                className="text-xs font-sans font-light leading-relaxed mb-6 max-w-xs"
+                style={{ color: 'var(--muted-foreground)' }}>
+                {t('moreComingDesc')}
+              </p>
+              
+              <a
+                href={`/${locale}#contact`}
+                className="project-link inline-flex items-center gap-1.5 text-[11px] uppercase tracking-widest font-semibold transition-all duration-300"
+                style={{ color: 'var(--primary)' }}>
+                {locale === 'es' ? 'Comenzar un proyecto' : 'Start a project'}
+                <ArrowUpRight size={13} className="shrink-0" />
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
