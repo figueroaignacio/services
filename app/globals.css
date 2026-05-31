@@ -61,3 +61,24 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), system-ui, sans-serif;
 }
+
+/* Why Me — brighten watermark number on card hover */
+.why-me-card:hover > [aria-hidden="true"]:first-of-type {
+  color: rgba(212, 178, 144, 0.09) !important;
+}
+
+/* Services — divide-y border color */
+.service-row {
+  border-color: rgba(42, 30, 23, 0.8);
+}
+
+/* Glowing edge shimmer */
+@keyframes shimmer-x {
+  0%   { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+.glow-edge {
+  background-size: 200% auto;
+  animation: shimmer-x 2.5s linear infinite;
+}
