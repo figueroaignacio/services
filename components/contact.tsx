@@ -171,6 +171,29 @@ export default function Contact() {
           </aside>
         </div>
       </div>
+      {/* Code Editor / Terminal Viewport Watermark */}
+      <svg
+        className="absolute right-4 top-1/4 w-[150px] h-[150px] sm:w-[220px] sm:h-[220px] lg:w-[300px] lg:h-[300px] text-primary/8 pointer-events-none select-none translate-x-2 sm:translate-x-4 z-0"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.25"
+        aria-hidden="true"
+      >
+        {/* Terminal box */}
+        <rect x="5" y="15" width="90" height="70" rx="3" />
+        {/* Title bar buttons */}
+        <circle cx="12" cy="22" r="1.5" fill="currentColor" fillOpacity="0.5" />
+        <circle cx="18" cy="22" r="1.5" fill="currentColor" fillOpacity="0.5" />
+        <circle cx="24" cy="22" r="1.5" fill="currentColor" fillOpacity="0.5" />
+        <line x1="5" y1="29" x2="95" y2="29" />
+
+        {/* Command lines */}
+        <text x="12" y="42" fontSize="4" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.5">&gt; npm run dev</text>
+        <text x="12" y="52" fontSize="4.5" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.6">ready - started server on port 3000</text>
+        <text x="12" y="62" fontSize="4" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.5">&gt; compiling...</text>
+        <text x="12" y="72" fontSize="4" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.5">&gt; ready in 1.4s</text>
+      </svg>
     </section>
   )
 }

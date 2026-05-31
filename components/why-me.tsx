@@ -142,6 +142,29 @@ export default function WhyMe() {
           })}
         </div>
       </div>
+      {/* Algorithm Flowchart Watermark */}
+      <svg
+        className="absolute left-4 top-1/4 w-[160px] h-[160px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] text-primary/8 pointer-events-none select-none -translate-x-4 sm:-translate-x-6 z-0"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.25"
+        aria-hidden="true"
+      >
+        <rect x="35" y="10" width="30" height="15" rx="2" />
+        <text x="50" y="19" fontSize="4.5" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">START</text>
+        <line x1="50" y1="25" x2="50" y2="40" />
+        <path d="M 50 40 L 65 50 L 50 60 L 35 50 Z" />
+        <text x="50" y="52" fontSize="3" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">BUILD?</text>
+        <line x1="65" y1="50" x2="80" y2="50" />
+        <line x1="80" y1="50" x2="80" y2="70" />
+        <rect x="68" y="70" width="24" height="12" rx="1" />
+        <text x="80" y="77" fontSize="3.5" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">YES</text>
+        <line x1="35" y1="50" x2="20" y2="50" />
+        <line x1="20" y1="50" x2="20" y2="70" />
+        <rect x="8" y="70" width="24" height="12" rx="1" />
+        <text x="20" y="77" fontSize="3.5" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">NO</text>
+      </svg>
     </section>
   )
 }

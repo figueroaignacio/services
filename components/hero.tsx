@@ -75,6 +75,39 @@ export default function Hero() {
           </div>
         </div>
       </div>
+      {/* Network node graph representing AI & Integrations */}
+      <svg
+        className="absolute right-4 bottom-10 w-[220px] h-[220px] sm:w-[320px] sm:h-[320px] lg:w-[450px] lg:h-[450px] text-primary/8 pointer-events-none select-none z-0"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.25"
+        aria-hidden="true"
+      >
+        <circle cx="50" cy="50" r="2.5" fill="currentColor" />
+        <circle cx="25" cy="30" r="2" fill="currentColor" />
+        <circle cx="75" cy="30" r="2" fill="currentColor" />
+        <circle cx="30" cy="70" r="2" fill="currentColor" />
+        <circle cx="70" cy="70" r="2" fill="currentColor" />
+        <circle cx="15" cy="50" r="1.5" fill="currentColor" />
+        <circle cx="85" cy="50" r="1.5" fill="currentColor" />
+        <line x1="50" y1="50" x2="25" y2="30" />
+        <line x1="50" y1="50" x2="75" y2="30" />
+        <line x1="50" y1="50" x2="30" y2="70" />
+        <line x1="50" y1="50" x2="70" y2="70" />
+        <line x1="25" y1="30" x2="15" y2="50" />
+        <line x1="30" y1="70" x2="15" y2="50" />
+        <line x1="75" y1="30" x2="85" y2="50" />
+        <line x1="70" y1="70" x2="85" y2="50" />
+        <line x1="25" y1="30" x2="75" y2="30" strokeDasharray="1 1" />
+        <line x1="30" y1="70" x2="70" y2="70" strokeDasharray="1 1" />
+        <circle cx="50" cy="50" r="15" strokeDasharray="1 2" />
+        <circle cx="50" cy="50" r="30" strokeDasharray="1 3" />
+        <text x="25" y="24" fontSize="3" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.5">01</text>
+        <text x="75" y="24" fontSize="3" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.5">10</text>
+        <text x="15" y="44" fontSize="3" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.5">{"{"}</text>
+        <text x="85" y="44" fontSize="3" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.5">{"}"}</text>
+      </svg>
     </section>
   )
 }

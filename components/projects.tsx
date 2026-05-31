@@ -187,6 +187,25 @@ export default function Projects({ projects }: ProjectsProps) {
           </article>
         </div>
       </div>
+      {/* Code bracket layout / AST Tree Schematic */}
+      <svg
+        className="absolute left-4 top-1/4 w-[160px] h-[160px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] text-primary/8 pointer-events-none select-none -translate-x-4 sm:-translate-x-6 z-0"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.25"
+        aria-hidden="true"
+      >
+        <path d="M 10 10 L 25 10 M 10 10 L 10 90 M 10 90 L 25 90" />
+        <path d="M 20 25 L 35 25 M 20 25 L 20 75 M 20 75 L 35 75" />
+        <text x="35" y="32" fontSize="3" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.4">{"const app = () => {"}</text>
+        <text x="45" y="42" fontSize="3" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.4">{"return ("}</text>
+        <text x="55" y="52" fontSize="3" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.4">{"<Navbar />"}</text>
+        <text x="55" y="62" fontSize="3" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.4">{"<Hero />"}</text>
+        <text x="45" y="72" fontSize="3" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.4">{")"}</text>
+        <text x="35" y="82" fontSize="3" fontFamily="var(--font-sans)" fill="currentColor" fillOpacity="0.4">{"}"}</text>
+        <circle cx="20" cy="50" r="1.5" strokeDasharray="1 1" />
+      </svg>
     </section>
   )
 }

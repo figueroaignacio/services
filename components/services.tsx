@@ -133,6 +133,36 @@ export default function Services() {
           ))}
         </div>
       </div>
+      {/* Database relationship / API node schematic */}
+      <svg
+        className="absolute right-4 top-1/4 w-[160px] h-[160px] sm:w-[250px] sm:h-[250px] lg:w-[350px] lg:h-[350px] text-primary/8 pointer-events-none select-none translate-x-4 sm:translate-x-6 z-0"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="0.25"
+        aria-hidden="true"
+      >
+        <rect x="15" y="15" width="25" height="20" rx="1" />
+        <line x1="15" y1="22" x2="40" y2="22" />
+        <text x="27.5" y="20" fontSize="2.5" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">USER_DB</text>
+        <circle cx="20" cy="28" r="0.75" fill="currentColor" />
+        <circle cx="20" cy="32" r="0.75" fill="currentColor" />
+
+        <rect x="60" y="15" width="25" height="20" rx="1" />
+        <line x1="60" y1="22" x2="85" y2="22" />
+        <text x="72.5" y="20" fontSize="2.5" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">API_GATEWAY</text>
+        <circle cx="65" cy="28" r="0.75" fill="currentColor" />
+        <circle cx="65" cy="32" r="0.75" fill="currentColor" />
+
+        <rect x="37.5" y="60" width="25" height="20" rx="1" />
+        <line x1="37.5" y1="67" x2="62.5" y2="67" />
+        <text x="50" y="65" fontSize="2.5" fontFamily="var(--font-sans)" textAnchor="middle" fill="currentColor" fillOpacity="0.4">AI_MODEL</text>
+
+        <path d="M 40 25 L 50 25 L 50 60" />
+        <path d="M 60 25 L 50 25" />
+        <path d="M 50 60 Q 50 50 60 50" strokeDasharray="1 1" />
+        <path d="M 15 30 L 5 30 L 5 70 L 37.5 70" strokeDasharray="1 1" />
+      </svg>
     </section>
   )
 }
