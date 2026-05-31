@@ -16,7 +16,13 @@
     "ctaSecondary": "Hablemos",
     "techBadges": "Sitios Web · IA y Chatbots · Tiendas Online · Multilingüe · Integraciones · E-commerce",
     "capabilitiesTitle": "Lo que puedo construir para vos:",
-    "capabilities": ["Sitios de Negocio", "IA y Chatbots", "Tiendas Online", "Webs Multilingüe", "Integraciones a Medida"]
+    "capabilities": [
+      "Sitios de Negocio",
+      "IA y Chatbots",
+      "Tiendas Online",
+      "Webs Multilingüe",
+      "Integraciones a Medida"
+    ]
   },
   "whyMe": {
     "title": "¿Por qué trabajar conmigo en vez de una agencia?",
@@ -56,21 +62,43 @@
     "starterMonthlyArs": "+ $15.000/mes",
     "starterMonthlyUsd": "+ $15/mes",
     "starterFor": "Para freelancers, profesionales y emprendedores",
-    "starterFeatures": ["Landing page o portfolio", "Hasta 5 secciones", "Diseño adaptado a celular", "Dominio .com/.com.ar incluido", "Soporte y mantenimiento mensual", "Hosting, SSL y seguridad activa"],
+    "starterFeatures": [
+      "Landing page o portfolio",
+      "Hasta 5 secciones",
+      "Diseño adaptado a celular",
+      "Dominio .com/.com.ar incluido",
+      "Soporte y mantenimiento mensual",
+      "Hosting, SSL y seguridad activa"
+    ],
     "proName": "Pro",
     "proPriceArs": "desde $500.000",
     "proPriceUsd": "from $599",
     "proMonthlyArs": "+ $25.000/mes",
     "proMonthlyUsd": "+ $25/mes",
     "proFor": "Para PYMEs, estudios y marcas",
-    "proFeatures": ["Todo Starter incluido", "Web de empresa completa", "Optimizado para Google (SEO)", "Dominio y hosting incluido", "Mantenimiento, SSL y seguridad activa", "Panel para actualizar contenido fácilmente", "Conectado a 1 herramienta externa"],
+    "proFeatures": [
+      "Todo Starter incluido",
+      "Web de empresa completa",
+      "Optimizado para Google (SEO)",
+      "Dominio y hosting incluido",
+      "Mantenimiento, SSL y seguridad activa",
+      "Panel para actualizar contenido fácilmente",
+      "Conectado a 1 herramienta externa"
+    ],
     "customName": "A medida",
     "customPriceArs": "desde $900.000",
     "customPriceUsd": "from $999",
     "customMonthlyArs": "+ $45.000/mes",
     "customMonthlyUsd": "+ $45/mes",
     "customFor": "Para startups y empresas con necesidades específicas",
-    "customFeatures": ["Todo lo anterior incluido", "Dominio y hosting de alto rendimiento", "Mantenimiento proactivo y seguridad avanzada", "Asistente de IA o chatbot", "Automatizaciones e integraciones a medida", "Soporte prioritario post-lanzamiento"],
+    "customFeatures": [
+      "Todo lo anterior incluido",
+      "Dominio y hosting de alto rendimiento",
+      "Mantenimiento proactivo y seguridad avanzada",
+      "Asistente de IA o chatbot",
+      "Automatizaciones e integraciones a medida",
+      "Soporte prioritario post-lanzamiento"
+    ],
     "cta": "Pedir presupuesto gratis",
     "highlighted": "Más elegido"
   },
@@ -102,6 +130,14 @@
     "details": "Ver caso de estudio",
     "moreComing": "Más proyectos en camino...",
     "moreComingDesc": "Siempre estoy construyendo nuevos productos digitales. Diseñemos y construyamos el tuyo."
+  },
+  "testimonials": {
+    "title": "Lo que dicen de mi trabajo",
+    "subtitle": "Opiniones y experiencias de clientes reales sobre el proceso de diseño y desarrollo.",
+    "sofiaQuote": "Tu servicio superó mis expectativas. Fue súper fácil crear la idea y me acompañaste en todo momento, fue muy llevadero todo el proceso. La web quedó con una estética que me representa, con un diseño simple, interactivo y fácil de leer, me encantó. Creo que representa el 100% la intención del estudio.",
+    "sofiaRole": "Diseñadora de Interiores",
+    "moreComing": "Más testimonios en camino...",
+    "moreComingDesc": "Constantemente sumando nuevas experiencias y opiniones a medida que finalizan los proyectos."
   },
   "meta": {
     "title": "Desarrollo Web para Startups y Empresas en Argentina",

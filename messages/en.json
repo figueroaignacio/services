@@ -16,7 +16,13 @@
     "ctaSecondary": "Talk to me",
     "techBadges": "Websites · AI Tools · Chatbots · Multilingual · Integrations · E-commerce",
     "capabilitiesTitle": "What I can build for you:",
-    "capabilities": ["Business Websites", "AI & Chatbots", "Online Stores", "Multilingual Sites", "Custom Integrations"]
+    "capabilities": [
+      "Business Websites",
+      "AI & Chatbots",
+      "Online Stores",
+      "Multilingual Sites",
+      "Custom Integrations"
+    ]
   },
   "whyMe": {
     "title": "Why work with me instead of an agency?",
@@ -56,21 +62,43 @@
     "starterMonthlyArs": "+ $15,000/mo",
     "starterMonthlyUsd": "+ $15/mo",
     "starterFor": "For freelancers, professionals, and solopreneurs",
-    "starterFeatures": ["Landing page or portfolio", "Up to 5 sections", "Mobile-friendly design", "Domain name included", "Monthly maintenance & support", "Hosting, SSL & active security"],
+    "starterFeatures": [
+      "Landing page or portfolio",
+      "Up to 5 sections",
+      "Mobile-friendly design",
+      "Domain name included",
+      "Monthly maintenance & support",
+      "Hosting, SSL & active security"
+    ],
     "proName": "Pro",
     "proPriceArs": "from $500,000",
     "proPriceUsd": "from $599",
     "proMonthlyArs": "+ $25,000/mo",
     "proMonthlyUsd": "+ $25/mo",
     "proFor": "For small businesses, studios, and brands",
-    "proFeatures": ["Everything in Starter", "Full business website", "Google-optimized (SEO)", "Domain & hosting included", "Maintenance, SSL & active security", "Easy-to-update content panel", "Connected to 1 external tool"],
+    "proFeatures": [
+      "Everything in Starter",
+      "Full business website",
+      "Google-optimized (SEO)",
+      "Domain & hosting included",
+      "Maintenance, SSL & active security",
+      "Easy-to-update content panel",
+      "Connected to 1 external tool"
+    ],
     "customName": "Custom",
     "customPriceArs": "from $900,000",
     "customPriceUsd": "from $999",
     "customMonthlyArs": "+ $45,000/mo",
     "customMonthlyUsd": "+ $45/mo",
     "customFor": "For startups and companies with specific needs",
-    "customFeatures": ["Everything above included", "High-performance domain & hosting", "Proactive maintenance & security", "AI assistant or chatbot", "Custom automations & integrations", "Priority post-launch support"],
+    "customFeatures": [
+      "Everything above included",
+      "High-performance domain & hosting",
+      "Proactive maintenance & security",
+      "AI assistant or chatbot",
+      "Custom automations & integrations",
+      "Priority post-launch support"
+    ],
     "cta": "Get a free quote",
     "highlighted": "Most popular"
   },
@@ -102,6 +130,14 @@
     "details": "Read case study",
     "moreComing": "More projects coming soon...",
     "moreComingDesc": "I'm always building new digital products. Let's design and build yours next."
+  },
+  "testimonials": {
+    "title": "What clients are saying",
+    "subtitle": "Real feedback and experiences from clients about the design and development process.",
+    "sofiaQuote": "Your service exceeded my expectations. Developing the concept was super easy, and you guided me every step of the way—the entire process was incredibly smooth. The website ended up with an aesthetic that truly represents me, with a simple, interactive, and easy-to-read design that I absolutely love. I believe it captures 100% of the studio's vision.",
+    "sofiaRole": "Diseñadora de Interiores",
+    "moreComing": "More testimonials coming soon...",
+    "moreComingDesc": "Constantly adding new client feedback as projects are successfully completed."
   },
   "meta": {
     "title": "Web Development for Startups & Companies in Argentina",
