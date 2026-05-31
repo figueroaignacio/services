@@ -22,6 +22,8 @@ const plusJakarta = Plus_Jakarta_Sans({
   display: 'swap',
 });
 
+const BASE_URL = 'https://services.ignaciofigueroa.dev';
+
 export async function generateMetadata({
   params,
 }: {
@@ -34,23 +36,38 @@ export async function generateMetadata({
   return {
     title: meta?.title ?? 'Desarrollo Web Freelance — Argentina',
     description: meta?.description ?? 'Presencia digital que convierte.',
-    metadataBase: new URL('https://tudominio.com'), // TODO: replace with real domain
+    metadataBase: new URL(BASE_URL),
     openGraph: {
       title: meta?.title,
       description: meta?.description,
       type: 'website',
-      locale: locale,
+      url: `${BASE_URL}/${locale}`,
+      siteName: 'Ignacio Figueroa — Dev',
+      locale: locale === 'es' ? 'es_AR' : 'en_US',
+      alternateLocale: locale === 'es' ? ['en_US'] : ['es_AR'],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: meta?.title,
+      description: meta?.description,
     },
     alternates: {
-      canonical: `/${locale}`,
+      canonical: `${BASE_URL}/${locale}`,
       languages: {
-        es: '/es',
-        en: '/en',
+        es: `${BASE_URL}/es`,
+        en: `${BASE_URL}/en`,
+        'x-default': `${BASE_URL}/es`,
       },
     },
     robots: {
       index: true,
       follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-snippet': 160,
+        'max-image-preview': 'large',
+      },
     },
   };
 }
@@ -58,6 +75,25 @@ export async function generateMetadata({
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+const personJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Ignacio Figueroa',
+  url: BASE_URL,
+  jobTitle: 'Freelance Web Developer',
+  description:
+    'Freelance web developer specializing in Next.js, TypeScript, React, Node.js, AI integrations, and multilingual (i18n) web applications. Based in Argentina.',
+  knowsAbout: ['Next.js', 'TypeScript', 'React', 'Node.js', 'PostgreSQL', 'AI Integration', 'i18n', 'REST APIs'],
+  email: 'contact@ignaciofigueroa.dev',
+  sameAs: ['https://linkedin.com/in/figueroa-ignacio'],
+  offers: {
+    '@type': 'Offer',
+    description:
+      'Freelance web development services: landing pages, institutional websites, marketing sites, i18n, AI bots, and backend APIs.',
+    url: BASE_URL,
+  },
+};
 
 export default async function LocaleLayout({
   children,
@@ -76,6 +112,12 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} suppressHydrationWarning>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }}
+        />
+      </head>
       <body className={`${cormorant.variable} ${plusJakarta.variable} antialiased`}>
         <ThemeProvider>
           <NextIntlClientProvider messages={messages}>

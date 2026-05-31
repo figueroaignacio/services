@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       disallow: '/api/',
     },
-    sitemap: 'https://tudominio.com/sitemap.xml', // TODO: replace with real domain
+    sitemap: 'https://services.ignaciofigueroa.dev/sitemap.xml',
   };
 }
