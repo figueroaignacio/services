@@ -1,14 +1,14 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { useTranslations } from 'next-intl';
-import { Check, ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react'
+import { useTranslations } from 'next-intl'
+import { useState } from 'react'
 
-type Currency = 'ARS' | 'USD';
+type Currency = 'ARS' | 'USD'
 
 export default function Pricing() {
-  const t = useTranslations('pricing');
-  const [currency, setCurrency] = useState<Currency>('ARS');
+  const t = useTranslations('pricing')
+  const [currency, setCurrency] = useState<Currency>('ARS')
 
   const tiers = [
     {
@@ -38,7 +38,7 @@ export default function Pricing() {
       highlighted: false,
       index: 2,
     },
-  ] as const;
+  ] as const
 
   return (
     <section
@@ -46,9 +46,9 @@ export default function Pricing() {
       aria-labelledby="pricing-heading"
       className="py-28 relative overflow-hidden"
       style={{
-        background: 'linear-gradient(180deg, var(--background) 0%, var(--muted) 50%, var(--background) 100%)',
-      }}
-    >
+        background:
+          'linear-gradient(180deg, var(--background) 0%, var(--muted) 50%, var(--background) 100%)',
+      }}>
       <div
         className="absolute inset-0 pointer-events-none"
         aria-hidden="true"
@@ -66,10 +66,11 @@ export default function Pricing() {
             </span>
             <h2
               id="pricing-heading"
-              className="font-heading text-4xl md:text-5xl font-light text-foreground tracking-tight"
-            >
+              className="font-heading text-4xl md:text-5xl font-light text-foreground tracking-tight">
               {t('title')}{' '}
-              <span className="font-heading italic text-accent font-normal">&amp; Planes</span>
+              <span className="font-heading italic text-accent font-normal">
+                &amp; Planes
+              </span>
             </h2>
           </div>
 
@@ -77,13 +78,15 @@ export default function Pricing() {
             className="pricing-toggle relative flex items-center gap-0 p-1 rounded-full w-fit shrink-0 border border-border/60"
             role="group"
             aria-label="Select currency"
-            style={{ background: 'var(--muted)' }}
-          >
+            style={{ background: 'var(--muted)' }}>
             <div
               className="toggle-indicator absolute top-1 bottom-1 w-[calc(50%-4px)] rounded-full transition-transform duration-300 ease-in-out"
               style={{
                 background: 'var(--primary)',
-                transform: currency === 'ARS' ? 'translateX(4px)' : 'translateX(calc(100% + 4px))',
+                transform:
+                  currency === 'ARS'
+                    ? 'translateX(4px)'
+                    : 'translateX(calc(100% + 4px))',
               }}
               aria-hidden="true"
             />
@@ -94,19 +97,22 @@ export default function Pricing() {
                 aria-pressed={currency === c}
                 className="relative z-10 px-7 py-2.5 rounded-full text-xs font-semibold tracking-widest uppercase transition-colors duration-300 cursor-pointer"
                 style={{
-                  color: currency === c ? 'var(--primary-foreground)' : 'var(--muted-foreground)',
-                }}
-              >
+                  color:
+                    currency === c
+                      ? 'var(--primary-foreground)'
+                      : 'var(--muted-foreground)',
+                }}>
                 {c}
               </button>
             ))}
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.12fr_1fr] gap-px bg-border/30 rounded-[var(--radius-xl)] overflow-hidden border border-border/30 items-stretch">
+        <div className="grid grid-cols-1 md:grid-cols-[1fr_1.12fr_1fr] gap-px bg-border/30 rounded-xl overflow-hidden border border-border/30 items-stretch">
           {tiers.map((tier) => {
-            const features = t.raw(tier.featuresKey) as string[];
-            const price = currency === 'ARS' ? t(tier.priceArsKey) : t(tier.priceUsdKey);
+            const features = t.raw(tier.featuresKey) as string[]
+            const price =
+              currency === 'ARS' ? t(tier.priceArsKey) : t(tier.priceUsdKey)
 
             return (
               <article
@@ -120,11 +126,10 @@ export default function Pricing() {
                     ? 'linear-gradient(160deg, #1f160f 0%, #1a1009 40%, #130c08 100%)'
                     : 'var(--card)',
                   padding: tier.highlighted ? '2.75rem 2rem' : '2.25rem 2rem',
-                }}
-              >
+                }}>
                 {tier.highlighted && (
                   <div
-                    className="absolute top-0 left-0 right-0 h-[2px]"
+                    className="absolute top-0 left-0 right-0 h-0.5"
                     style={{
                       background:
                         'linear-gradient(90deg, transparent 0%, rgba(212,178,144,0.8) 40%, rgba(229,193,157,1) 50%, rgba(212,178,144,0.8) 60%, transparent 100%)',
@@ -153,8 +158,7 @@ export default function Pricing() {
                         color: 'var(--primary)',
                         borderColor: 'rgba(212,178,144,0.3)',
                         background: 'rgba(212,178,144,0.08)',
-                      }}
-                    >
+                      }}>
                       {t('highlighted')}
                     </span>
                   </div>
@@ -166,52 +170,58 @@ export default function Pricing() {
                       className="font-heading font-light tracking-tight mb-2 transition-colors duration-300"
                       style={{
                         fontSize: tier.highlighted ? '1.75rem' : '1.5rem',
-                        color: tier.highlighted ? 'var(--accent)' : 'var(--foreground)',
-                      }}
-                    >
+                        color: tier.highlighted
+                          ? 'var(--accent)'
+                          : 'var(--foreground)',
+                      }}>
                       {t(tier.nameKey)}
                     </h3>
                     <p
                       className="text-xs font-sans font-light leading-relaxed"
-                      style={{ color: 'var(--muted-foreground)' }}
-                    >
+                      style={{ color: 'var(--muted-foreground)' }}>
                       {t(tier.forKey)}
                     </p>
                   </div>
 
-                  <div className="pb-7" style={{ borderBottom: '1px solid rgba(42,30,23,0.8)' }}>
+                  <div
+                    className="pb-7"
+                    style={{ borderBottom: '1px solid rgba(42,30,23,0.8)' }}>
                     <p
                       className="font-heading font-light leading-none tracking-tight"
                       style={{
                         fontSize: tier.highlighted ? '2.6rem' : '2rem',
                         color: 'var(--foreground)',
                         opacity: tier.highlighted ? 1 : 0.85,
-                      }}
-                    >
+                      }}>
                       {price}
                     </p>
                     <p
                       className="text-[10px] mt-2 font-sans tracking-widest uppercase"
-                      style={{ color: 'var(--muted-foreground)', opacity: 0.5 }}
-                    >
-                      {currency === 'ARS' ? 'Pesos argentinos' : 'US dollars · fixed'}
+                      style={{
+                        color: 'var(--muted-foreground)',
+                        opacity: 0.5,
+                      }}>
+                      {currency === 'ARS'
+                        ? 'Pesos argentinos'
+                        : 'US dollars · fixed'}
                     </p>
                   </div>
 
                   <ul
                     className="flex flex-col flex-1"
                     aria-label={`Features of ${t(tier.nameKey)}`}
-                    style={{ gap: 0 }}
-                  >
+                    style={{ gap: 0 }}>
                     {features.map((feature, i) => (
                       <li
                         key={i}
                         className="flex items-center gap-3 py-3 text-sm font-sans font-light"
                         style={{
-                          borderBottom: i < features.length - 1 ? '1px solid rgba(42,30,23,0.5)' : 'none',
+                          borderBottom:
+                            i < features.length - 1
+                              ? '1px solid rgba(42,30,23,0.5)'
+                              : 'none',
                           color: 'var(--muted-foreground)',
-                        }}
-                      >
+                        }}>
                         <span
                           className="shrink-0 w-4 h-4 rounded-full flex items-center justify-center"
                           style={{
@@ -219,15 +229,19 @@ export default function Pricing() {
                               ? 'rgba(212,178,144,0.15)'
                               : 'rgba(212,178,144,0.07)',
                           }}
-                          aria-hidden="true"
-                        >
+                          aria-hidden="true">
                           <Check
                             size={9}
                             strokeWidth={2.5}
                             style={{ color: 'var(--primary)' }}
                           />
                         </span>
-                        <span style={{ color: tier.highlighted ? 'var(--foreground)' : undefined }}>
+                        <span
+                          style={{
+                            color: tier.highlighted
+                              ? 'var(--foreground)'
+                              : undefined,
+                          }}>
                           {feature}
                         </span>
                       </li>
@@ -254,21 +268,26 @@ export default function Pricing() {
                     }
                     onMouseEnter={(e) => {
                       if (!tier.highlighted) {
-                        (e.currentTarget as HTMLElement).style.color = 'var(--foreground)';
-                        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(212,178,144,0.4)';
+                        ;(e.currentTarget as HTMLElement).style.color =
+                          'var(--foreground)'
+                        ;(e.currentTarget as HTMLElement).style.borderColor =
+                          'rgba(212,178,144,0.4)'
                       } else {
-                        (e.currentTarget as HTMLElement).style.background = 'var(--accent)';
+                        ;(e.currentTarget as HTMLElement).style.background =
+                          'var(--accent)'
                       }
                     }}
                     onMouseLeave={(e) => {
                       if (!tier.highlighted) {
-                        (e.currentTarget as HTMLElement).style.color = 'var(--muted-foreground)';
-                        (e.currentTarget as HTMLElement).style.borderColor = 'rgba(42,30,23,0.9)';
+                        ;(e.currentTarget as HTMLElement).style.color =
+                          'var(--muted-foreground)'
+                        ;(e.currentTarget as HTMLElement).style.borderColor =
+                          'rgba(42,30,23,0.9)'
                       } else {
-                        (e.currentTarget as HTMLElement).style.background = 'var(--primary)';
+                        ;(e.currentTarget as HTMLElement).style.background =
+                          'var(--primary)'
                       }
-                    }}
-                  >
+                    }}>
                     {t('cta')}
                     <ArrowRight
                       size={12}
@@ -279,17 +298,16 @@ export default function Pricing() {
                   </a>
                 </div>
               </article>
-            );
+            )
           })}
         </div>
 
         <p
           className="text-[11px] tracking-wide text-center font-light mt-8"
-          style={{ color: 'var(--muted-foreground)', opacity: 0.5 }}
-        >
+          style={{ color: 'var(--muted-foreground)', opacity: 0.5 }}>
           * {t('footnote')}
         </p>
       </div>
     </section>
-  );
+  )
 }
