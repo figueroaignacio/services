@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from 'next-intl'
 import { getMessages } from 'next-intl/server'
 import { Cormorant_Garamond, Plus_Jakarta_Sans } from 'next/font/google'
 import { notFound } from 'next/navigation'
+import Chatbot from '@/components/chatbot'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -50,6 +51,7 @@ export default async function LocaleLayout({
         className={`${cormorant.variable} ${plusJakarta.variable} antialiased`}>
         <NextIntlClientProvider messages={messages}>
           {children}
+          <Chatbot />
         </NextIntlClientProvider>
       </body>
     </html>

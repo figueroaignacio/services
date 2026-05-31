@@ -141,5 +141,25 @@
   "meta": {
     "title": "Web Development for Startups & Companies in Argentina",
     "description": "I build websites, AI tools, and digital products that help businesses grow. No agencies, no templates. Fast, professional, and built to convert. Based in Argentina."
+  },
+  "chatbot": {
+    "title": "Ignacio's Assistant",
+    "subtitle": "AI Agent · Knowledge Base",
+    "placeholder": "Ask Ignacio's assistant...",
+    "welcome": "Hi! I'm Ignacio's AI assistant. Ask me anything about Ignacio's web development services, pricing, projects, or how to get started! You can also ask me to submit a contact inquiry for you.",
+    "sending": "Sending...",
+    "send": "Send",
+    "close": "Close",
+    "statusOnline": "Online",
+    "toolDrafting": "Drafting contact request...",
+    "toolSuccess": "Inquiry sent! Ignacio has been notified and will email you within 24 hours.",
+    "toolError": "Failed to send request. Please try again.",
+    "errorOccurred": "An error occurred.",
+    "retry": "Retry",
+    "suggestionsHeader": "Suggestions",
+    "q1": "What are your pricing plans?",
+    "q2": "Can we integrate a CRM or payments?",
+    "q3": "How long does a landing page take?",
+    "q4": "Tell Ignacio I want to hire him"
   }
 }

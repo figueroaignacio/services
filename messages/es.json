@@ -141,5 +141,25 @@
   "meta": {
     "title": "Desarrollo Web para Startups y Empresas en Argentina",
     "description": "Construyo sitios web, herramientas de IA y productos digitales que ayudan a los negocios a crecer. Sin agencias, sin plantillas. Rápido, profesional y diseñado para convertir. Argentina."
+  },
+  "chatbot": {
+    "title": "Asistente de Ignacio",
+    "subtitle": "Agente IA · Base de Conocimiento",
+    "placeholder": "Preguntale al asistente de Ignacio...",
+    "welcome": "¡Hola! Soy el asistente de IA de Ignacio. Preguntame lo que quieras sobre sus servicios de desarrollo web, precios, proyectos o cómo empezar. También podés pedirme que le envíe un mensaje de contacto por vos.",
+    "sending": "Enviando...",
+    "send": "Enviar",
+    "close": "Cerrar",
+    "statusOnline": "En línea",
+    "toolDrafting": "Redactando solicitud de contacto...",
+    "toolSuccess": "¡Mensaje enviado con éxito! Ignacio te responderá por email en menos de 24 horas.",
+    "toolError": "No se pudo enviar el mensaje. Por favor, reintenta.",
+    "errorOccurred": "Ocurrió un error.",
+    "retry": "Reintentar",
+    "suggestionsHeader": "Sugerencias",
+    "q1": "¿Cuáles son los planes y precios?",
+    "q2": "¿Se puede integrar Mercado Pago o CRM?",
+    "q3": "¿Cuánto demora una landing page?",
+    "q4": "Decile a Ignacio que quiero contratarlo"
   }
 }
