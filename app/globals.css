@@ -82,3 +82,22 @@ body {
   background-size: 200% auto;
   animation: shimmer-x 2.5s linear infinite;
 }
+
+/* Pricing — pro card top glow pulse */
+.pricing-card--pro {
+  box-shadow: 0 0 0 0 rgba(212,178,144,0);
+  transition: box-shadow 0.5s ease;
+}
+.pricing-card--pro:hover {
+  box-shadow: 0 24px 60px -16px rgba(212,178,144,0.18), inset 0 0 40px -20px rgba(212,178,144,0.06);
+}
+
+/* Pricing — currency toggle indicator */
+.pricing-toggle {
+  isolation: isolate;
+}
+
+/* Pricing — non-pro card hover */
+.pricing-card:not(.pricing-card--pro):hover {
+  background: #1d140f !important;
+}
