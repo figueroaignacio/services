@@ -15,6 +15,7 @@ export default async function PlanPage({ params }: Props) {
   if (!plan) notFound()
 
   const price = locale === 'es' ? plan.price.ars : plan.price.usd
+  const monthlyPrice = locale === 'es' ? plan.price.monthlyArs : plan.price.monthlyUsd
 
   const otherPlans = allPlans.filter(
     (p) => p.locale === locale && p.slug !== slug,
@@ -111,9 +112,14 @@ export default async function PlanPage({ params }: Props) {
                     {price}
                   </p>
                   <p
-                    className="text-[10px] mt-1.5 font-sans tracking-widest uppercase"
-                    style={{ color: 'var(--muted-foreground)', opacity: 0.5 }}>
-                    {locale === 'es' ? 'precio de partida' : 'starting price'}
+                    className="text-[10px] mt-1.5 font-sans tracking-widest uppercase flex flex-wrap gap-x-1.5 gap-y-0.5 items-center"
+                    style={{ color: 'var(--muted-foreground)', opacity: 0.7 }}>
+                    <span>
+                      {locale === 'es' ? 'precio de partida' : 'starting price'}
+                    </span>
+                    <span style={{ color: 'var(--primary)' }} className="font-semibold">
+                      · {monthlyPrice}
+                    </span>
                   </p>
                 </div>
 
@@ -282,9 +288,14 @@ export default async function PlanPage({ params }: Props) {
                     {other.tagline}
                   </p>
                   <p
-                    className="relative z-10 font-heading font-light text-lg tracking-tight mt-1"
+                    className="relative z-10 font-heading font-light text-lg tracking-tight mt-1 flex flex-wrap gap-x-1.5 items-center"
                     style={{ color: 'var(--primary)', opacity: 0.8 }}>
-                    {locale === 'es' ? other.price.ars : other.price.usd}
+                    <span>
+                      {locale === 'es' ? other.price.ars : other.price.usd}
+                    </span>
+                    <span className="text-xs font-sans font-normal opacity-70">
+                      ({locale === 'es' ? other.price.monthlyArs : other.price.monthlyUsd})
+                    </span>
                   </p>
                 </Link>
               ))}

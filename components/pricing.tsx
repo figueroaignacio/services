@@ -23,6 +23,8 @@ export default function Pricing() {
       nameKey: 'starterName',
       priceArsKey: 'starterPriceArs',
       priceUsdKey: 'starterPriceUsd',
+      monthlyArsKey: 'starterMonthlyArs',
+      monthlyUsdKey: 'starterMonthlyUsd',
       forKey: 'starterFor',
       featuresKey: 'starterFeatures',
       highlighted: false,
@@ -32,6 +34,8 @@ export default function Pricing() {
       nameKey: 'proName',
       priceArsKey: 'proPriceArs',
       priceUsdKey: 'proPriceUsd',
+      monthlyArsKey: 'proMonthlyArs',
+      monthlyUsdKey: 'proMonthlyUsd',
       forKey: 'proFor',
       featuresKey: 'proFeatures',
       highlighted: true,
@@ -41,6 +45,8 @@ export default function Pricing() {
       nameKey: 'customName',
       priceArsKey: 'customPriceArs',
       priceUsdKey: 'customPriceUsd',
+      monthlyArsKey: 'customMonthlyArs',
+      monthlyUsdKey: 'customMonthlyUsd',
       forKey: 'customFor',
       featuresKey: 'customFeatures',
       highlighted: false,
@@ -121,6 +127,8 @@ export default function Pricing() {
             const features = t.raw(tier.featuresKey) as string[]
             const price =
               currency === 'ARS' ? t(tier.priceArsKey) : t(tier.priceUsdKey)
+            const monthlyPrice =
+              currency === 'ARS' ? t(tier.monthlyArsKey) : t(tier.monthlyUsdKey)
 
             return (
               <article
@@ -204,14 +212,19 @@ export default function Pricing() {
                       {price}
                     </p>
                     <p
-                      className="text-[10px] mt-2 font-sans tracking-widest uppercase"
+                      className="text-[10px] mt-2 font-sans tracking-widest uppercase flex flex-wrap gap-x-1.5 gap-y-0.5 items-center"
                       style={{
                         color: 'var(--muted-foreground)',
-                        opacity: 0.5,
+                        opacity: 0.7,
                       }}>
-                      {currency === 'ARS'
-                        ? 'Pesos argentinos'
-                        : 'US dollars · fixed'}
+                      <span>
+                        {currency === 'ARS'
+                          ? 'Pesos argentinos'
+                          : 'US dollars · fixed'}
+                      </span>
+                      <span style={{ color: 'var(--primary)' }} className="font-semibold">
+                        · {monthlyPrice}
+                      </span>
                     </p>
                   </div>
 

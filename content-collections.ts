@@ -14,6 +14,8 @@ const plans = defineCollection({
     price: z.object({
       ars: z.string(),
       usd: z.string(),
+      monthlyArs: z.string(),
+      monthlyUsd: z.string(),
     }),
     idealFor: z.array(z.string()),
     includes: z.array(z.string()),
