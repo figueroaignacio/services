@@ -2,8 +2,8 @@
 We offer simple, transparent pricing for three core plans. All plans require a one-time development payment, followed by a monthly fee for active maintenance, hosting, SSL certificates, security, and updates.
 
 ## 1. Starter Plan
-- **Price**: From $299 USD (one-time) / From $250,000 ARS
-- **Monthly Fee**: +$15 USD/mo / +$15,000 ARS/mo
+- **Price**: From $299 USD (one-time) / From $190,000 ARS
+- **Monthly Fee**: +$15 USD/mo / +$22,000 ARS/mo
 - **Best For**: Freelancers, independent professionals, and solopreneurs.
 - **Includes**:
   - Landing page or portfolio website (single-page layout)
@@ -14,8 +14,8 @@ We offer simple, transparent pricing for three core plans. All plans require a o
   - Ongoing monthly text/image updates & maintenance
 
 ## 2. Pro Plan
-- **Price**: From $599 USD (one-time) / From $500,000 ARS
-- **Monthly Fee**: +$25 USD/mo / +$25,000 ARS/mo
+- **Price**: From $599 USD (one-time) / From $380,000 ARS
+- **Monthly Fee**: +$25 USD/mo / +$35,000 ARS/mo
 - **Best For**: Small businesses, local studios, and growing brands.
 - **Includes**:
   - Everything in the Starter Plan
@@ -25,8 +25,8 @@ We offer simple, transparent pricing for three core plans. All plans require a o
   - Integration with 1 external tool (e.g. Email newsletter subscription, CRM, WhatsApp bubble)
 
 ## 3. Custom Plan
-- **Price**: From $999 USD (one-time) / From $900,000 ARS
-- **Monthly Fee**: +$45 USD/mo / +$45,000 ARS/mo
+- **Price**: From $999 USD (one-time) / From $680,000 ARS
+- **Monthly Fee**: +$45 USD/mo / +$60,000 ARS/mo
 - **Best For**: Startups, custom platforms, and companies with specific needs.
 - **Includes**:
   - Everything in Starter & Pro Plans

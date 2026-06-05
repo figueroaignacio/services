@@ -143,10 +143,10 @@
     "description": "I build websites, AI tools, and digital products that help businesses grow. No agencies, no templates. Fast, professional, and built to convert. Based in Argentina."
   },
   "chatbot": {
-    "title": "Ignacio's Assistant",
+    "title": "Services AI Assistant",
     "subtitle": "AI Agent · Knowledge Base",
-    "placeholder": "Ask Ignacio's assistant...",
-    "welcome": "Hi! I'm Ignacio's AI assistant. Ask me anything about Ignacio's web development services, pricing, projects, or how to get started! You can also ask me to submit a contact inquiry for you.",
+    "placeholder": "Ask Services AI Assistant...",
+    "welcome": "Hi! I'm Services AI Assistant. Ask me anything about web development services, pricing, projects, or how to get started! You can also ask me to submit a contact inquiry for you.",
     "sending": "Sending...",
     "send": "Send",
     "close": "Close",

@@ -56,9 +56,9 @@
     "monthlyMaintenance": "+ abono mensual",
     "footnote": "Precios orientativos de desarrollo (pago único). El servicio requiere un abono mensual de mantenimiento, monitoreo, seguridad y hosting (nombre de dominio ya incluido).",
     "starterName": "Starter",
-    "starterPriceArs": "desde $250.000",
+    "starterPriceArs": "desde $190.000",
     "starterPriceUsd": "from $299",
-    "starterMonthlyArs": "+ $15.000/mes",
+    "starterMonthlyArs": "+ $22.000/mes",
     "starterMonthlyUsd": "+ $15/mes",
     "starterFor": "Para freelancers, profesionales y emprendedores",
     "starterFeatures": [
@@ -70,9 +70,9 @@
       "Hosting, SSL y seguridad activa"
     ],
     "proName": "Pro",
-    "proPriceArs": "desde $500.000",
+    "proPriceArs": "desde $380.000",
     "proPriceUsd": "from $599",
-    "proMonthlyArs": "+ $25.000/mes",
+    "proMonthlyArs": "+ $35.000/mes",
     "proMonthlyUsd": "+ $25/mes",
     "proFor": "Para PYMEs, estudios y marcas",
     "proFeatures": [
@@ -85,9 +85,9 @@
       "Conectado a 1 herramienta externa"
     ],
     "customName": "A medida",
-    "customPriceArs": "desde $900.000",
+    "customPriceArs": "desde $680.000",
     "customPriceUsd": "from $999",
-    "customMonthlyArs": "+ $45.000/mes",
+    "customMonthlyArs": "+ $60.000/mes",
     "customMonthlyUsd": "+ $45/mes",
     "customFor": "Para startups y empresas con necesidades específicas",
     "customFeatures": [
@@ -143,10 +143,10 @@
     "description": "Construyo sitios web, herramientas de IA y productos digitales que ayudan a los negocios a crecer. Sin agencias, sin plantillas. Rápido, profesional y diseñado para convertir. Argentina."
   },
   "chatbot": {
-    "title": "Asistente de Ignacio",
+    "title": "Asistente de servicios",
     "subtitle": "Agente IA · Base de Conocimiento",
-    "placeholder": "Preguntale al asistente de Ignacio...",
-    "welcome": "¡Hola! Soy el asistente de IA de Ignacio. Preguntame lo que quieras sobre sus servicios de desarrollo web, precios, proyectos o cómo empezar. También podés pedirme que le envíe un mensaje de contacto por vos.",
+    "placeholder": "Preguntale al asistente de servicios...",
+    "welcome": "¡Hola! Soy el asistente de IA de servicios. Preguntame lo que quieras sobre sus servicios de desarrollo web, precios, proyectos o cómo empezar. También podés pedirme que le envíe un mensaje de contacto por vos.",
     "sending": "Enviando...",
     "send": "Enviar",
     "close": "Cerrar",
